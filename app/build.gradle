@@ -1,5 +1,15 @@
 apply plugin: 'com.android.application'
 
+/**
+ * Use the property (key/value pairs format) file secrets.properties
+ * to configure api keys for your project.
+ * Here is the list of necessary keys:
+ * - DEBUG_NASA_NEOWS_API_KEY
+ * - RELEASE_NASA_NEOWS_API_KEY
+ */
+def Properties projectProperties = new Properties()
+projectProperties.load(new FileInputStream(new File(projectDir, '/secrets.properties')))
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
@@ -12,7 +22,13 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "NASA_NEOWS_API_KEY", "\"" + projectProperties.DEBUG_NASA_NEOWS_API_KEY + "\""
+        }
+
         release {
+            buildConfigField "String", "NASA_NEOWS_API_KEY", "\"" + projectProperties.RELEASE_NASA_NEOWS_API_KEY + "\""
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
