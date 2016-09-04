@@ -1,4 +1,4 @@
-package br.com.ecarrara.neom.nearearthobjects.data.network;
+package br.com.ecarrara.neom.nearearthobjects.data.repository.datasource;
 
 import java.io.IOException;
 import java.util.Date;
@@ -6,6 +6,8 @@ import java.util.List;
 
 import br.com.ecarrara.neom.nearearthobjects.data.entity.json.NearEarthObjectJsonEntity;
 import br.com.ecarrara.neom.nearearthobjects.data.entity.json.NearEarthObjectsJsonServiceResponse;
+import br.com.ecarrara.neom.nearearthobjects.data.network.RestApiConnection;
+import br.com.ecarrara.neom.nearearthobjects.data.network.RestApiInterface;
 import retrofit2.Call;
 
 import static br.com.ecarrara.neom.utils.formatters.DateFormatter.formatDate;

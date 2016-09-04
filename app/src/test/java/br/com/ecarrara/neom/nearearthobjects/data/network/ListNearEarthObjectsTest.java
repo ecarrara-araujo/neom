@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 import br.com.ecarrara.neom.nearearthobjects.data.entity.json.NearEarthObjectJsonEntity;
+import br.com.ecarrara.neom.nearearthobjects.data.repository.datasource.RestApi;
 import br.com.ecarrara.neom.testdata.nearearthobjectserviceresponses.TestServiceResponseFor20150907;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
