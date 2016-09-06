@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.com.ecarrara.neom.R;
-import br.com.ecarrara.neom.nearearthobjects.presentation.model.NearEarthObjectModel;
+import br.com.ecarrara.neom.nearearthobjects.data.entity.NearEarthObject;
 import br.com.ecarrara.neom.nearearthobjects.presentation.view.NearEarthObjectsListView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,7 +33,7 @@ public class NearEarthObjectsListActivity extends AppCompatActivity
     }
 
     @Override
-    public void renderNearEarthObjectsList(List<NearEarthObjectModel> nearEarthObjectModels) {
+    public void renderNearEarthObjectsList(List<NearEarthObject> nearEarthObjectModels) {
 
     }
 
